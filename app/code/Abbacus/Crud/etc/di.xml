@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">	
+	<preference for="Abbacus\Crud\Api\ProjectRepositoryInterface" type="Abbacus\Crud\Model\ProjectRepository"/>
+	<preference for="Abbacus\Crud\Api\Data\ProjectInterface" type="Abbacus\Crud\Model\Data\Project"/>
+	<preference for="Abbacus\Crud\Api\Data\ProjectSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Abbacus\Crud\Model\ResourceModel\Project\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">abbacus_crud_project</argument>
+			<argument name="resourceModel" xsi:type="string">Abbacus\Crud\Model\ResourceModel\Project\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="abbacus_crud_project_listing_data_source" xsi:type="string">Abbacus\Crud\Model\ResourceModel\Project\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

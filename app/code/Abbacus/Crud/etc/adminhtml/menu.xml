@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Abbacus::top_level" title="Abbacus" module="Abbacus_Crud" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="Abbacus_Crud::abbacus_crud_project" title="Project" module="Abbacus_Crud" sortOrder="9999" resource="Magento_Backend::content" parent="Abbacus::top_level" action="abbacus_crud/project/index"/>
+	</menu>
+</config>

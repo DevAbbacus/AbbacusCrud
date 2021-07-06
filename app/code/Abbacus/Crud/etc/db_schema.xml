@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="abbacus_crud_project" resource="default" engine="innodb" comment="abbacus_crud_project Table">
+		<column xsi:type="smallint" name="project_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="project_id"/>
+		</constraint>
+		<column name="title" nullable="false" xsi:type="text" comment="title"/>
+		<column name="description" nullable="false" xsi:type="varchar" comment="description" length="255"/>
+		<column name="assignt_to" nullable="false" xsi:type="text" comment="assignt_to"/>
+		<column name="created_at" nullable="true" xsi:type="datetime" comment="created_at"/>
+		<column name="start_time" nullable="true" xsi:type="datetime" comment="start_time"/>
+		<column name="end_time" nullable="true" xsi:type="datetime" comment="end_time"/>
+		<column name="updated_at" nullable="true" xsi:type="timestamp" comment="updated_at"/>
+	</table>
+</schema>

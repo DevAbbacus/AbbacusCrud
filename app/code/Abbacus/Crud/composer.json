@@ -1,0 +1,22 @@
+{
+    "name": "abbacus/module-crud",
+    "description": "Crud With  API",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Abbacus",
+            "email": "joealbertson820@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Abbacus\\Crud\\": ""
+        }
+    }
+}

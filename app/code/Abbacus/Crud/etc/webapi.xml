@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/abbacus-crud/project" method="POST">
+		<service class="Abbacus\Crud\Api\ProjectRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/abbacus-crud/project/search" method="GET">
+		<service class="Abbacus\Crud\Api\ProjectRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Abbacus_Crud::Project_view"/>
+		</resources>
+	</route>
+	<route url="/V1/abbacus-crud/project/:projectId" method="GET">
+		<service class="Abbacus\Crud\Api\ProjectRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Abbacus_Crud::Project_view"/>
+		</resources>
+	</route>
+	<route url="/V1/abbacus-crud/project/:projectId" method="PUT">
+		<service class="Abbacus\Crud\Api\ProjectRepositoryInterface" method="update"/>
+		<resources>
+			<resource ref="Abbacus_Crud::Project_update"/>
+		</resources>
+	</route>
+	<route url="/V1/abbacus-crud/project/:projectId" method="DELETE">
+		<service class="Abbacus\Crud\Api\ProjectRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Abbacus_Crud::Project_delete"/>
+		</resources>
+	</route>	
+</routes>
